@@ -17,6 +17,8 @@ const gameBoard = (() => {
     let tool = "O";
     let indexOfX = [];
     let indexOfO = [];
+    let movesCounter = 0;
+
     const winnerDisplayOutput = document.querySelector(".result-div");
     const newGameDiv = document.querySelector(".newgame-div");
     const newGameBgDiv = document.querySelector(".newgame-bg-div");
@@ -75,6 +77,12 @@ const gameBoard = (() => {
             counterX = 0;
             counterO = 0;
         }
+        console.log()
+        if(indexOfO.length + indexOfX.length === 9){
+            askNewGame();
+            return "Tie";
+        }
+
         return false;
     }
 
@@ -93,7 +101,12 @@ const gameBoard = (() => {
     
 
     const displayWinner = (tool) => {
-        winnerDisplayOutput.innerText = tool + " is the winner.";
+        if(tool === "X" || tool === "O"){
+            winnerDisplayOutput.innerText = tool + " is the winner!";
+        }
+        else if(tool ==="Tie"){
+            winnerDisplayOutput.innerText = "It is a Draw.";
+        }
     }
     
     const toggleTool = () => {
@@ -102,6 +115,7 @@ const gameBoard = (() => {
     
     const addNewState = (index) => {
         if(getPreviousState()[index] === ""){
+            movesCounter++;
             gameBoardStates.push(getPreviousState())
             getPreviousState()[index] = tool;
             addToXandO(tool, index);
