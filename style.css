@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 1px solid black; */
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+}
+
+.heading{
+    margin: 0;
+    text-align: center;
+    font-size: 48px;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-div{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-div{
+    background-color: antiquewhite;
+    width: 50%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 3px 1px #888888;
+    border-radius: 1rem;
+}
+
+.gamebox-div{
+    height: 300px;
+    width: 300px;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #d3d3d3;
+    grid-gap: 1px;
+}
+
+.box-input{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 56px;
+}
+
+.result-div{
+    height: 100px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
