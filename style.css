@@ -37,7 +37,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 3px 1px #888888;
+    box-shadow: 0 0 100px 1px #bebebe;
     border-radius: 1rem;
 }
 
@@ -50,6 +50,38 @@ main{
     grid-template-rows: repeat(3, 1fr);
     background-color: #d3d3d3;
     grid-gap: 1px;
+    filter: none;
+}
+
+.newgame-div{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    margin: 2rem;
+    /* background-color: rgba(117, 117, 117, 0.2); */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.newgame-bg-div{
+    display: none;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    margin: 2rem;
+    background-color: rgba(117, 117, 117, 0.2);
+    filter: blur(8px);
+}
+
+.newgame-btn{
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid #888888;
+    color: gray;
+    cursor: pointer;
 }
 
 .box-input{
